@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/MyApplication/app/src/main/res/layout/activity_log_in.xml" value="0.20416666666666666" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_trip_screen.xml" value="0.20416666666666666" />
+        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.1518987341772152" />
+        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_trip_screen.xml" value="0.1506849315068493" />
+        <entry key="..\:/MyApplication/app/src/main/res/layout/grid_element.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/activity_main.xml" value="0.259375" />
       </map>
     </option>

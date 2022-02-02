@@ -24,4 +24,5 @@ public class Bus {
     public void setId_driver(String id_driver) {
         this.id_driver = id_driver;
     }
+
 }

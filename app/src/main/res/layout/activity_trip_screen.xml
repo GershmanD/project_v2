@@ -7,10 +7,13 @@
     tools:context=".TripScreen">
 
     <GridView
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="272dp"
+        android:layout_height="512dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:numColumns="2"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

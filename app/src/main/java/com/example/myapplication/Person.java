@@ -1,9 +1,9 @@
 package com.example.myapplication;
 
 public class Person {
-    String name;
-    int id;
-    String phoneNumber;
+    private String name;
+    private int id;
+    private String phoneNumber;
 
 
 
@@ -38,7 +38,12 @@ public class Person {
     }
 
 
+    public void Teacher (String name, String phoneNumber, String id){
+        int type = 1;
+    }
+    public void Student (String name, String phoneNumber, String name_of_teacher){
 
+    }
 
 
 }
