@@ -8,13 +8,13 @@
 
     <GridView
         android:id="@+id/gridview_buses_trip"
-        android:layout_width="272dp"
-        android:layout_height="512dp"
+        android:layout_width="394dp"
+        android:layout_height="717dp"
+        android:numColumns="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:numColumns="2"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

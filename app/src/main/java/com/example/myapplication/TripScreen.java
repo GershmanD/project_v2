@@ -32,6 +32,7 @@ public class TripScreen extends AppCompatActivity {
         buses.add(new Bus(777777, "3037485"));
         buses.add(new Bus(888888, "3037485"));
         buses.add(new Bus(999999, "3037485"));
+        buses.add(new Bus(999999, "3037485"));
 
         adapter = new GridAdapter(TripScreen.this, buses);
         gridView.setAdapter(adapter);
