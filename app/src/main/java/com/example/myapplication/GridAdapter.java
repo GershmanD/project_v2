@@ -37,4 +37,5 @@ public class GridAdapter extends ArrayAdapter<Bus> {
         iv_bus_grid.setImageResource(R.drawable.bus);
         return listitemView;
     }
+
 }
