@@ -44,7 +44,7 @@ public class GetLocation extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_start);
 
         AddressText = findViewById(R.id.addressText);
         LocationButton = findViewById(R.id.locationButton);
@@ -56,12 +56,10 @@ public class GetLocation extends AppCompatActivity {
 
         LocationButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-
+            public void onClick(View view) {
                 getCurrentLocation();
             }
         });
-
 
     }
 
@@ -184,6 +182,8 @@ public class GetLocation extends AppCompatActivity {
 
         if (locationManager == null) {
             locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+
         }
 
         isEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
