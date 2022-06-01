@@ -6,6 +6,11 @@ import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.util.Patterns;
@@ -118,7 +123,30 @@ public class mail_pass extends AppCompatActivity {
         editor.apply();
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_settings, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Toast.makeText(this,
+                "Selected Item: " +item.getTitle(),
+                Toast.LENGTH_SHORT).show();
+        switch (item.getItemId()) {
+            case R.id.create_trip:
+                // do your code
+                return true;
+            case R.id.logout:
+                // do your code
+                return true;
+            case R.id.request_managment:
+                // do your code
+                return true;
 
-
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }

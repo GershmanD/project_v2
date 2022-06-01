@@ -3,29 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/MyApplication/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21481481481481482" />
-        <entry key="..\:/MyApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21481481481481482" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.2" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout-w936dp/activity_login.xml" value="0.33" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_bus.xml" value="0.16041666666666668" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_create_enter_trip.xml" value="0.20416666666666666" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_create_trip.xml" value="0.14" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_enter_to_trip.xml" value="0.1" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_get_location.xml" value="0.2" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_image.xml" value="0.18" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_log_in.xml" value="0.15" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_mail_pass.xml" value="0.1" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_profile.xml" value="0.16" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_start.xml" value="0.20416666666666666" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_trip_screen.xml" value="0.1" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/content_mail_pass.xml" value="0.22" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/fragment_first.xml" value="0.20416666666666666" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/fragment_second.xml" value="0.20416666666666666" />
-        <entry key="..\:/MyApplication/app/src/main/res/layout/grid_element.xml" value="0.2" />
-        <entry key="..\:/MyApplication/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21481481481481482" />
-        <entry key="..\:/MyApplication/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1046875" />
+        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_get_location.xml" value="0.22" />
+        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_image.xml" value="0.16" />
+        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_log_in.xml" value="0.20416666666666666" />
+        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.1518987341772152" />
+        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_trip_screen.xml" value="0.1506849315068493" />
+        <entry key="..\:/MyApplication/app/src/main/res/layout/grid_element.xml" value="0.22" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/activity_main.xml" value="0.259375" />
+        <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/menu/menu_settings.xml" value="0.16" />
       </map>
     </option>
   </component>
