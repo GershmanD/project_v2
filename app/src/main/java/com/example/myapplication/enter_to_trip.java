@@ -25,7 +25,7 @@ public class enter_to_trip extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
-            }
+            }//
         });
         enter_to_trip.setOnClickListener(new View.OnClickListener() {
             @Override
