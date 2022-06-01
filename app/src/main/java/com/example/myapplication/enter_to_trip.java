@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class enter_to_trip extends AppCompatActivity {
     private Button enter_to_trip;
@@ -35,6 +36,9 @@ public class enter_to_trip extends AppCompatActivity {
                         MainActivity.class);
                 startActivity(intent);
 
+                } else {
+                    Toast toast = Toast.makeText(com.example.myapplication.enter_to_trip.this, "Availed key", Toast.LENGTH_SHORT);
+                    toast.show();
                 }
             }
         });

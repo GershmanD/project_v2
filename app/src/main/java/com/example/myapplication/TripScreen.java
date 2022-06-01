@@ -26,10 +26,22 @@ public class TripScreen extends AppCompatActivity {
         buses = new ArrayList<>();
 
 
+        buses.add(new Bus(1, "Daniel", "Gershman", "0539533447", 25));
+        buses.add(new Bus(1, "Daniel", "Gershman", "0539533447", 25));
+        buses.add(new Bus(1, "Daniel", "Gershman", "0539533447", 25));
+        buses.add(new Bus(1, "Daniel", "Gershman", "0539533447", 25));
+        buses.add(new Bus(1, "Daniel", "Gershman", "0539533447", 25));
+        buses.add(new Bus(1, "Daniel", "Gershman", "0539533447", 25));
+        buses.add(new Bus(1, "Daniel", "Gershman", "0539533447", 25));
+        buses.add(new Bus(1, "Daniel", "Gershman", "0539533447", 25));
+        buses.add(new Bus(1, "Daniel", "Gershman", "0539533447", 25));
+
         adapter = new GridAdapter(TripScreen.this, buses);
         gridView.setAdapter(adapter);
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+
+       /*  gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //todo - what next after click on current bus
@@ -42,10 +54,23 @@ public class TripScreen extends AppCompatActivity {
                     Intent intent = new Intent(TripScreen.this, Bus.class);
                     startActivity(intent);
 
+                } else {
+                    Intent intent = new Intent(TripScreen.this, Bus.class);
+                    startActivity(intent);
                 }
-                Toast.makeText(TripScreen.this, (int) gridView.getItemIdAtPosition(i), Toast.LENGTH_SHORT).show();
-            }
+
+    }
             });
+*/
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                position +=1;
+                Toast.makeText(TripScreen.this, "bus #" + position , Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(TripScreen.this, Bus.class);
+                startActivity(intent);
+            }
+        });
 
         gridView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
