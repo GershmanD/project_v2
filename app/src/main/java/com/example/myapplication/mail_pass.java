@@ -105,7 +105,7 @@ public class mail_pass extends AppCompatActivity {
         }
 
         //если только аторизация прошла, сохранить логин и пароль
-
+//
         if(isChecked){
             saveUserData();
         }
