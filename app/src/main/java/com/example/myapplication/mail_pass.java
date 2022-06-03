@@ -3,21 +3,16 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
-
-import android.view.ContextMenu;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.util.Patterns;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class mail_pass extends AppCompatActivity {
@@ -27,11 +22,13 @@ public class mail_pass extends AppCompatActivity {
     Button btn_sign_up;
     CheckBox saveme;
     EditText email, pass;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mail_pass);
 
+        popUp_dialog();
         btn_sign_up = findViewById(R.id.btn_signe_up);
         saveme = findViewById(R.id.checkBox);
         email = findViewById(R.id.et_enter_email);
@@ -42,15 +39,15 @@ public class mail_pass extends AppCompatActivity {
         editor = sp.edit();
 
 
-        if(sp.contains("Email")){
-            email.setText(sp.getString("Email",""));
+        if (sp.contains("Email")) {
+            email.setText(sp.getString("Email", ""));
         }
 
-        if(sp.contains("Password")){
-            pass.setText(sp.getString("Password",""));
+        if (sp.contains("Password")) {
+            pass.setText(sp.getString("Password", ""));
         }
 
-        if(sp.contains("Email") && sp.contains("Password")){
+        if (sp.contains("Email") && sp.contains("Password")) {
 
             Intent intent = new Intent(mail_pass.this, enter_to_trip.class);
             intent.putExtra("email", email.getText().toString());
@@ -61,7 +58,7 @@ public class mail_pass extends AppCompatActivity {
         btn_sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(userLogin()) {
+                if (userLogin()) {
 
                     Intent intent = new Intent(mail_pass.this, enter_to_trip.class);
                     intent.putExtra("email", email.getText().toString());
@@ -74,31 +71,48 @@ public class mail_pass extends AppCompatActivity {
 
 
     }
-    private boolean userLogin(){
+
+    private void popUp_dialog() {
+        AlertDialog.Builder alertDialogBuilder =
+                new AlertDialog.Builder(mail_pass.this);
+        // set title
+        alertDialogBuilder.setTitle("Welcome");
+        // set dialog message
+        alertDialogBuilder.setMessage("if you are all reday registered,\n" +
+                "just enter email and password !").setCancelable(false);
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        // show it
+        alertDialog.show();
+        // After some action
+        alertDialog.dismiss();
+    }
+
+    private boolean userLogin() {
 
         boolean isChecked = saveme.isChecked();
         String mail = email.getText().toString().trim();
         String password = pass.getText().toString().trim();
 
-        if(mail.isEmpty()){
+        if (mail.isEmpty()) {
             email.setError("Email is required!");
             email.requestFocus();
             return false;
         }
 
-        if(!Patterns.EMAIL_ADDRESS.matcher(mail).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(mail).matches()) {
             email.setError("Please provide valid email!");
             email.requestFocus();
             return false;
         }
 
-        if(password.isEmpty()){
+        if (password.isEmpty()) {
             pass.setError("Password is required!");
             pass.requestFocus();
             return false;
         }
 
-        if(password.length() < 6){
+        if (password.length() < 6) {
             pass.setError("Min password length should be 6 characters!");
             pass.requestFocus();
             return false;
@@ -106,7 +120,7 @@ public class mail_pass extends AppCompatActivity {
 
         //если только аторизация прошла, сохранить логин и пароль
 //
-        if(isChecked){
+        if (isChecked) {
             saveUserData();
         }
 
@@ -123,6 +137,7 @@ public class mail_pass extends AppCompatActivity {
         editor.apply();
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_settings, menu);
@@ -132,7 +147,7 @@ public class mail_pass extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Toast.makeText(this,
-                "Selected Item: " +item.getTitle(),
+                "Selected Item: " + item.getTitle(),
                 Toast.LENGTH_SHORT).show();
         switch (item.getItemId()) {
             case R.id.create_trip:

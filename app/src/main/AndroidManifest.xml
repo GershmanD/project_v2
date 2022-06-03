@@ -14,8 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".Bus"
+            android:name=".Daniel_Template_Screen"
             android:exported="false" />
+
         <activity
             android:name=".CreateTrip"
             android:exported="false" />

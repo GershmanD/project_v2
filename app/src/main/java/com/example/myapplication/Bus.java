@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Bus extends AppCompatActivity {
+public class Bus {
 
         String lastname_driver, phonenumber_driver,  name_driver;
         int capacity_of_bus, bus_number;

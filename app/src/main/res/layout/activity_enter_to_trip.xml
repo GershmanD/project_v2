@@ -4,24 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:id="@+id/enter_screen_layout"
     tools:context=".enter_to_trip">
+
+    <ImageButton
+        android:id="@+id/btn_admin"
+        android:layout_width="149dp"
+        android:layout_height="168dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="368dp"
+        android:src="@drawable/admin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_teacher"
+        android:layout_width="149dp"
+        android:layout_height="168dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="192dp"
+        android:src="@drawable/teacher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_contact"
+        android:layout_width="149dp"
+        android:layout_height="168dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginBottom="172dp"
+        android:src="@drawable/teacher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_teacher3"
+        android:layout_width="149dp"
+        android:layout_height="168dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="172dp"
+        android:src="@drawable/teacher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <pl.droidsonroids.gif.GifImageView
 
-        android:id="@+id/gifImageView2"
-        android:layout_width="692dp"
-        android:layout_height="971dp"
-        android:src="@drawable/background"
+        android:id="@+id/img_bus"
+        android:layout_width="226dp"
+        android:layout_height="148dp"
+        android:src="@drawable/bus2"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.436" />
+        app:layout_constraintVertical_bias="0.985" />
 
-    <Button
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/enter_to_trip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,12 +70,13 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.783"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.231" />
+        app:layout_constraintVertical_bias="0.131"
+        app:srcCompat="@drawable/ic_done_foreground" />
 
-<EditText
+    <EditText
         android:id="@+id/et_key_of_trip"
         android:layout_width="220dp"
         android:layout_height="44dp"
@@ -47,25 +88,14 @@
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.162"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.643" />
+        app:layout_constraintVertical_bias="0.129" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:backgroundTint="#4A4040"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"/>
 
-    <Button
+    <!--<Button
+        android:drawableLeft=""
         android:id="@+id/btn_log_out"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -77,6 +107,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.891" />
+        app:layout_constraintVertical_bias="0.891" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

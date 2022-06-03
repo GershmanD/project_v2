@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "274159895482",
-    "project_id": "my-project-madmah",
-    "storage_bucket": "my-project-madmah.appspot.com"
+    "project_number": "1088553415941",
+    "project_id": "gershman-project-trip",
+    "storage_bucket": "gershman-project-trip.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:274159895482:android:63d409c92a54a4df661383",
+        "mobilesdk_app_id": "1:1088553415941:android:712f38c66fdd5e0671736c",
         "android_client_info": {
           "package_name": "com.example.myapplication"
         }
       },
       "oauth_client": [
         {
-          "client_id": "274159895482-f0orqdbe5tj7ob36j2qi8fjq1mafg66q.apps.googleusercontent.com",
+          "client_id": "1088553415941-m9oeskh7m6gtkepsg41jqa4hppa7v44h.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBdTiEl8h4J5KtLF8VhPZdn2cqocI3B_DA"
+          "current_key": "AIzaSyCkx0ZJHGnjskxfFuyVmWiL0UwTrMx5Ieo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "274159895482-f0orqdbe5tj7ob36j2qi8fjq1mafg66q.apps.googleusercontent.com",
+              "client_id": "1088553415941-m9oeskh7m6gtkepsg41jqa4hppa7v44h.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

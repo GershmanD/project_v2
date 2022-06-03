@@ -9,10 +9,10 @@
 
     <pl.droidsonroids.gif.GifImageView
 
-        android:id="@+id/gifImageView2"
-        android:layout_width="542dp"
-        android:layout_height="880dp"
-        android:src="@drawable/background"
+        android:id="@+id/img_bus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bus2"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,12 +83,13 @@
         app:layout_constraintVertical_bias="0.891" />
 
     <Button
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        app:icon="@drawable/ic_create_foreground"
         android:id="@+id/btn_create_trip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Trip"
-        android:textColor="#FFFFFF"
-        android:background="#FF3D00"
+        android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

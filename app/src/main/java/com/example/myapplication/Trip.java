@@ -15,6 +15,11 @@ public class Trip {
         this.place = place;
     }
 
+    public Trip(String key, String date) {
+        this.key = key;
+        this.date = date;
+    }
+
     public int getBut_amount() {
         return but_amount;
     }
