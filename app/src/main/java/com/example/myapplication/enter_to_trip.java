@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.ContextMenu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -21,13 +22,14 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-public class enter_to_trip extends Daniel_Template_Screen implements View.OnClickListener {
-    private FloatingActionButton enter_to_trip;
+public class enter_to_trip extends Daniel_Template_Screen
+        implements View.OnClickListener {
+    private FloatingActionButton fb_enter_key;
+    private EditText et_key_of_trip;
     private EditText etKey, etEmail, etPass;    //dialogs
     private String key = "";
     Button btn_LogOut, btn_LogIn, btnSubmit_Admin;  //dialogs
-    ImageButton btn_admin, btn_teacher, btn_contact;
-    ImageView img_bus;
+    ImageButton btn_admin, btn_teacher, btn_contact, img_bus, btn_relax;
     ConstraintLayout enter_screen_layout;
     Dialog d;
     int count = 0;
@@ -45,46 +47,76 @@ public class enter_to_trip extends Daniel_Template_Screen implements View.OnClic
 
     private void referencingAll() {
         d = new Dialog(this);
+        et_key_of_trip = findViewById(R.id.et_key_of_trip);
         enter_screen_layout = findViewById(R.id.enter_screen_layout);
         img_bus = findViewById(R.id.img_bus);
         moveImage(getApplicationContext(), img_bus);
-        enter_to_trip = findViewById(R.id.enter_to_trip);
+        fb_enter_key = findViewById(R.id.fb_enter_key);
         btn_admin = findViewById(R.id.btn_admin);
         btn_teacher = findViewById(R.id.btn_teacher);
         btn_contact = findViewById(R.id.btn_contact);
         btn_admin.setOnClickListener(this);
         btn_teacher.setOnClickListener(this);
         btn_contact.setOnClickListener(this);
-
+        btn_relax = findViewById(R.id.btn_relax);
+        btn_relax.setOnClickListener(this);
         registerForContextMenu(btn_teacher);
+        registerForContextMenu(btn_admin);
     }
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
-        // you can set menu header with title icon etc
-        menu.setHeaderTitle("Choose an action");
-        // add menu items
-        menu.add(0, v.getId(), 0, "Enter to trip");
-        menu.add(0, v.getId(), 0, "Logout");
-        menu.add(0, v.getId(), 0, "relaxation");
+        MenuInflater menuiflatr = getMenuInflater();
+        if (v.getId() == R.id.btn_admin) {
+            menuiflatr.inflate(R.menu.menu_admin, menu);
+            menu.setHeaderTitle("Admin OPtions");
+      /*      // add menu items
+            menu.add(0, v.getId(), 0, "Enter to trip");
+            menu.add(0, v.getId(), 0, "Logout");
+            menu.add(0, v.getId(), 0, "relaxation");*/
+        } else if (v.getId() == R.id.btn_teacher) {
+            //inflate another menu
+            menuiflatr.inflate(R.menu.menu_teacher, menu);
+            menu.setHeaderTitle("Teacher OPtions");
+            /*menu.setHeaderIcon(R.drawable.ic_launcher);
+            MenuItem item_On = menu.findItem(R.id.on);
+            MenuItem item_Off = menu.findItem(R.id.off);*/
+        }
     }
-
     // menu item select listener
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-
-        if (item.getTitle() == "Enter to trip") {
-            createTeacher_Dialog();
-        } else if (item.getTitle() == "Logout") {
-            finish();
-        } else if (item.getTitle() == "relaxation") {
-            Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(
-                    "https://www.youtube.com/watch?v=z6EchXyieos&t=9s&ab_channel=FunniestAnimalsEver"));
-            startActivity(intent);
+        switch(item.getItemId()){
+            case R.id.create_trip:
+                startActivity(new Intent(enter_to_trip.this,
+                        CreateTrip.class));
+                break;
+            case R.id.add_manager:
+                //
+                break;
+            case R.id.add_bus:
+                startActivity(
+                        new Intent(
+                                enter_to_trip.this,
+                        Add_Bus.class));
+                break;
+            //below menu of teacher
+            case R.id.enetr_trip:
+                enterToTrip();
+                break;
+            case R.id.all_students:
+                //
+                break;
         }
 
+
         return true;
+    }
+
+    private void enterToTrip() {
+        fb_enter_key.setVisibility(View.VISIBLE);
+        et_key_of_trip.setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -101,14 +133,19 @@ public class enter_to_trip extends Daniel_Template_Screen implements View.OnClic
                 }
                 break;
             case R.id.btn_admin:
-                createAdmin_Dialog();
+                howTo_dialog();
                 break;
             case R.id.btn_contact:
-
+                //call admin
                 break;
 
-            case R.id.btnSubmit_Admin:
-                checkAdmin();
+            case R.id.btn_teacher:
+                howTo_dialog();
+                break;
+            case R.id.btn_relax:
+                Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(
+                        "https://www.youtube.com/watch?v=z6EchXyieos&t=9s&ab_channel=FunniestAnimalsEver"));
+                startActivity(intent);
                 break;
         }
     }
@@ -152,15 +189,18 @@ public class enter_to_trip extends Daniel_Template_Screen implements View.OnClic
 
     }
 
-    public void createAdmin_Dialog() {
+    public void howTo_dialog() {
         d = new Dialog(this);
         d.setContentView(R.layout.admin_dialog);
         d.setTitle("Login");
         d.setCancelable(true);
-        etEmail = (EditText) d.findViewById(R.id.etEmail);
-        etPass = (EditText) d.findViewById(R.id.etPass);
         btnSubmit_Admin = (Button) d.findViewById(R.id.btnSubmit_Admin);
-        btnSubmit_Admin.setOnClickListener(this);
+        btnSubmit_Admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                d.dismiss();
+            }
+        });
         d.show();
 
     }

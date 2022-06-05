@@ -21,7 +21,7 @@
         android:id="@+id/btn_teacher"
         android:layout_width="149dp"
         android:layout_height="168dp"
-        android:layout_marginStart="196dp"
+        android:layout_marginStart="208dp"
         android:layout_marginTop="192dp"
         android:src="@drawable/teacher"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/btn_teacher3"
+        android:id="@+id/btn_relax"
         android:layout_width="149dp"
         android:layout_height="168dp"
         android:layout_marginStart="28dp"
@@ -62,7 +62,8 @@
         app:layout_constraintVertical_bias="0.985" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/enter_to_trip"
+        android:visibility="invisible"
+        android:id="@+id/fb_enter_key"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#FF3D00"
@@ -77,6 +78,7 @@
         app:srcCompat="@drawable/ic_done_foreground" />
 
     <EditText
+        android:visibility="invisible"
         android:id="@+id/et_key_of_trip"
         android:layout_width="220dp"
         android:layout_height="44dp"

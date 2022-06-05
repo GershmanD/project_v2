@@ -23,7 +23,8 @@ public class Daniel_Template_Screen extends AppCompatActivity {
     private static final String ALLOWED_CHARACTERS ="0123456789qwertyuiopasdfghjklzxcvbnm";
     protected GifImageView gifImageView;
     protected String Management_DatabseName = "Management";
-
+    protected String Trip_DatabseName = "Trips";
+    protected String Busses_DatabseName = "Busses";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

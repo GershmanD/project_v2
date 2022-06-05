@@ -4,28 +4,29 @@
     android:layout_height="match_parent"
 
     >
-    <EditText
-        android:id="@+id/etEmail"
+    <TextView
+        android:fontFamily="sans-serif"
         android:layout_width="match_parent"
         android:textSize="30sp"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:hint="email">
+        android:text="Message"
+        android:textStyle="bold"
+        android:gravity="center_horizontal">
 
-    </EditText>
+    </TextView>
 
-    <EditText
-        android:id="@+id/etPass"
+    <TextView
         android:layout_width="match_parent"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:hint="password"
-        android:password="true"
-        >
+        android:gravity="center_horizontal"
+        android:text="to open the option menu\n long click in button"
+        android:textStyle="bold">
 
 
-    </EditText>
+    </TextView>
 
     <Button
         android:id="@+id/btnSubmit_Admin"
@@ -35,7 +36,7 @@
         android:background="#c1112e"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:text="submit"
+        android:text="ok"
 
         />
 </LinearLayout>

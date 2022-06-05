@@ -14,14 +14,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".Students_Bus"
+            android:exported="false" />
+        <activity
+            android:name=".Students_In_Bus"
+            android:exported="false" />
+        <activity
+            android:name=".Busses_In_Trip"
+            android:exported="false" />
+        <activity
+            android:name=".All_Trips"
+            android:exported="false" />
+        <activity
             android:name=".Daniel_Template_Screen"
             android:exported="false" />
-
         <activity
             android:name=".CreateTrip"
             android:exported="false" />
         <activity
-            android:name=".Create_enter_trip"
+            android:name=".Add_Bus"
             android:exported="false" />
         <activity
             android:name=".mail_pass"

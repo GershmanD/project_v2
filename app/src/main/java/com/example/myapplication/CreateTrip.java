@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -81,8 +82,9 @@ public class CreateTrip extends Daniel_Template_Screen implements View.OnClickLi
     private void addTrip_ToDatbase() {
         String date = tv_date.getText().toString();
         Trip t = new Trip(key_trip,date);
-        trip_ref = FirebaseDatabase.getInstance().getReference().push();
+        trip_ref = FirebaseDatabase.getInstance().getReference(Trip_DatabseName).push();
         trip_ref.setValue(t);
+        Toast.makeText(this, "trip created succefully!", Toast.LENGTH_SHORT).show();
     }
 
     private void openDate_dialog() {

@@ -1,5 +1,11 @@
 package com.example.myapplication;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -23,10 +29,16 @@ public class mail_pass extends AppCompatActivity {
     CheckBox saveme;
     EditText email, pass;
 
+    FirebaseAuth firebaseAuth;
+    ProgressDialog progressDialog;
+
+    int adminMode=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mail_pass);
+
+        firebaseAuth = FirebaseAuth.getInstance();
 
         popUp_dialog();
         btn_sign_up = findViewById(R.id.btn_signe_up);
@@ -144,30 +156,60 @@ public class mail_pass extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_settings, menu);
-        return true;
+/*
+    public void register()
+    {
+
+        firebaseAuth.createUserWithEmailAndPassword(
+                etEmail.getText().toString(),
+                etPass.getText().toString()).addOnCompleteListener(this,
+                new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(MainActivity.this,
+                            "Successfully registered", Toast.LENGTH_LONG).show();
+                    if(adminMode==0){
+
+                    }
+
+                } else {
+                    Toast.makeText(MainActivity.this,
+                            "Registration Error", Toast.LENGTH_LONG).show();
+
+                }
+            }
+        });
+
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        Toast.makeText(this,
-                "Selected Item: " + item.getTitle(),
-                Toast.LENGTH_SHORT).show();
-        switch (item.getItemId()) {
-            case R.id.create_trip:
-                // do your code
-                return true;
-            case R.id.logout:
-                // do your code
-                return true;
-            case R.id.request_managment:
-                // do your code
-                return true;
+    public  void login()
+    {
+        firebaseAuth.signInWithEmailAndPassword(
+                etEmail.getText().toString(),
+                        etPass.getText().toString())
+                .addOnCompleteListener(this,
+                        new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(Task<AuthResult> task) {
 
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+                        if(task.isSuccessful()) {
+                            Toast.makeText(MainActivity.this,
+                                    "auth_success",Toast.LENGTH_SHORT).show();
+                            btnMainLogin.setText("Logout");
+
+                        }
+                        else
+                        {
+                            Toast.makeText(MainActivity.this,
+                                    "auth_failed",Toast.LENGTH_SHORT).show();
+
+                        }
+                    }
+                });
+
     }
+
+    */
+
 }

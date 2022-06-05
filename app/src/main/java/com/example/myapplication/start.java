@@ -23,6 +23,7 @@ public class start extends Daniel_Template_Screen {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+
                 Intent intent = new Intent(start.this,
                         mail_pass.class);
                 startActivity(intent);

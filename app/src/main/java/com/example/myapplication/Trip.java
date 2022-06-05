@@ -7,6 +7,15 @@ public class Trip {
     String date;
     String place;
 
+    public Trip() {
+    }
+
+    public Trip(String title, String key, String date, String place) {
+        this.title = title;
+        this.key = key;
+        this.date = date;
+        this.place = place;
+    }
     public Trip(int but_amount, String title, String key, String date, String place) {
         this.but_amount = but_amount;
         this.title = title;
