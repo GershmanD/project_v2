@@ -49,9 +49,12 @@ public class mail_pass extends AppCompatActivity {
 
         if (sp.contains("Email") && sp.contains("Password")) {
 
-            Intent intent = new Intent(mail_pass.this, enter_to_trip.class);
-            intent.putExtra("email", email.getText().toString());
-            intent.putExtra("password", pass.getText().toString());
+            Intent intent = new Intent(mail_pass.this,
+                    enter_to_trip.class);
+            intent.putExtra("email",
+                    email.getText().toString());
+            intent.putExtra("password",
+                    pass.getText().toString());
             startActivity(intent);
         }
 
@@ -60,9 +63,12 @@ public class mail_pass extends AppCompatActivity {
             public void onClick(View view) {
                 if (userLogin()) {
 
-                    Intent intent = new Intent(mail_pass.this, enter_to_trip.class);
-                    intent.putExtra("email", email.getText().toString());
-                    intent.putExtra("password", pass.getText().toString());
+                    Intent intent = new Intent(mail_pass.this,
+                            enter_to_trip.class);
+                    intent.putExtra("email",
+                            email.getText().toString());
+                    intent.putExtra("password",
+                            pass.getText().toString());
                     startActivity(intent);
 
                 }
@@ -78,7 +84,7 @@ public class mail_pass extends AppCompatActivity {
         // set title
         alertDialogBuilder.setTitle("Welcome");
         // set dialog message
-        alertDialogBuilder.setMessage("if you are all reday registered,\n" +
+        alertDialogBuilder.setMessage("if you are all ready registered,\n"+
                 "just enter email and password !").setCancelable(false);
         // create alert dialog
         AlertDialog alertDialog = alertDialogBuilder.create();

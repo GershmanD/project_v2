@@ -8,22 +8,17 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import android.app.Dialog;
-import android.graphics.Color;
-import android.net.Uri;
-import android.view.ContextMenu;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class enter_to_trip extends Daniel_Template_Screen implements View.OnClickListener {
@@ -35,8 +30,9 @@ public class enter_to_trip extends Daniel_Template_Screen implements View.OnClic
     ImageView img_bus;
     ConstraintLayout enter_screen_layout;
     Dialog d;
-
+    int count = 0;
     DatabaseReference managers_ref;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,9 +89,9 @@ public class enter_to_trip extends Daniel_Template_Screen implements View.OnClic
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.btn_LogIn:
-                if(etKey.getText().toString().equals(key)) {
+                if (etKey.getText().toString().equals(key)) {
                     Intent intent = new Intent(com.example.myapplication.enter_to_trip.this,
                             MainActivity.class);
                     startActivity(intent);
@@ -105,7 +101,7 @@ public class enter_to_trip extends Daniel_Template_Screen implements View.OnClic
                 }
                 break;
             case R.id.btn_admin:
-                    createAdmin_Dialog();
+                createAdmin_Dialog();
                 break;
             case R.id.btn_contact:
 
@@ -120,20 +116,20 @@ public class enter_to_trip extends Daniel_Template_Screen implements View.OnClic
     private void checkAdmin() {
         String name = etEmail.getText().toString();
         String phone = etPass.getText().toString();
-        managers_ref = FirebaseDatabase.getInstance().getReference(Management_DatabseName+"/");
-
+        managers_ref = FirebaseDatabase.getInstance().
+                getReference(Management_DatabseName + "/");
         managers_ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot data : snapshot.getChildren())
-                {
-                    String adminName =  data.child("name").getValue().toString();
-                    String adminPhone =  data.child("phone").getValue().toString();
-                    if(adminName.equals(name) && adminPhone.equals(phone))
+                for (DataSnapshot data : snapshot.getChildren()) {
+                    String adminName = data.child("name").getValue().toString();
+                    String adminPhone = data.child("phone").getValue().toString();
+                    if (adminName.equals(name) && adminPhone.equals(phone))
                         startActivity(new Intent(getApplicationContext(),
                                 MainActivity.class));
-
                 }
+
+
             }
 
             @Override
@@ -143,8 +139,7 @@ public class enter_to_trip extends Daniel_Template_Screen implements View.OnClic
         });
     }
 
-    public void createTeacher_Dialog()
-    {
+    public void createTeacher_Dialog() {
         d.setContentView(R.layout.teacher_dialog);
         d.setTitle("Select an option");
         d.setCancelable(true);
@@ -156,15 +151,15 @@ public class enter_to_trip extends Daniel_Template_Screen implements View.OnClic
         d.show();
 
     }
-    public void createAdmin_Dialog()
-    {
-        d= new Dialog(this);
+
+    public void createAdmin_Dialog() {
+        d = new Dialog(this);
         d.setContentView(R.layout.admin_dialog);
         d.setTitle("Login");
         d.setCancelable(true);
-        etEmail=(EditText)d.findViewById(R.id.etEmail);
-        etPass=(EditText)d.findViewById(R.id.etPass);
-        btnSubmit_Admin=(Button)d.findViewById(R.id.btnSubmit_Admin);
+        etEmail = (EditText) d.findViewById(R.id.etEmail);
+        etPass = (EditText) d.findViewById(R.id.etPass);
+        btnSubmit_Admin = (Button) d.findViewById(R.id.btnSubmit_Admin);
         btnSubmit_Admin.setOnClickListener(this);
         d.show();
 
