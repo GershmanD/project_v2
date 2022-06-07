@@ -40,6 +40,7 @@ public class Busses_In_Trip extends Daniel_Template_Screen {
                 startActivity(intent);
             }
         });
+        /*
         etTitle = (EditText) findViewById(R.id.etTitle);
         etBody = (EditText) findViewById(R.id.etBody);
         btnSave = (Button) findViewById(R.id.btnSave);
@@ -83,6 +84,6 @@ public class Busses_In_Trip extends Daniel_Template_Screen {
         finish();
 
 
-
+*/
     }
 }

@@ -10,16 +10,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class Students_Bus extends AppCompatActivity {
-    private ListView lv;
+    /*private ListView lv;
     private ArrayList<Model> modelArrayList;
     private CustomAdapter customAdapter;
     private Button btnselect, btndeselect, btnnext;
-    private  String[] animallist = new String[]{"Lion", "Tiger", "Leopard", "Cat"};
+    private  String[] animallist = new String[]{"Lion", "Tiger", "Leopard", "Cat"};*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_students_bus);
-        lv = (ListView) findViewById(R.id.lv);
+      /*  lv = (ListView) findViewById(R.id.lv);
         btnselect = (Button) findViewById(R.id.select);
         btndeselect = (Button) findViewById(R.id.deselect);
         btnnext = (Button) findViewById(R.id.next);
@@ -65,6 +65,6 @@ public class Students_Bus extends AppCompatActivity {
             list.add(model);
         }
         return list;
+    }*/
     }
-
 }

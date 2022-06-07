@@ -30,10 +30,10 @@ public class GridAdapter extends ArrayAdapter<Bus> {
         }
 
         Bus tmp_bus = getItem(position);
-        TextView tv_busnum_grid = listitemView.findViewById(R.id.tv_busnum_grid);
+        //TextView tv_busnum_grid = listitemView.findViewById(R.id.tv_busnum_grid);
         ImageView iv_bus_grid = listitemView.findViewById(R.id.iv_bus_grid);
 
-        tv_busnum_grid.setText("bus #"+String.valueOf(tmp_bus.getBus_number()));
+       // tv_busnum_grid.setText("bus #"+String.valueOf(tmp_bus.getBus_number()));
         iv_bus_grid.setImageResource(R.drawable.bus);
         return listitemView;
     }

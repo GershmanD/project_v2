@@ -25,7 +25,7 @@ public class TripScreen extends AppCompatActivity {
         gridView = findViewById(R.id.gridview_buses_trip);
         buses = new ArrayList<>();
 
-
+/*
         buses.add(new Bus(1, "Daniel", "Gershman", "0539533447", 25));
         buses.add(new Bus(1, "Daniel", "Gershman", "0539533447", 25));
         buses.add(new Bus(1, "Daniel", "Gershman", "0539533447", 25));
@@ -37,7 +37,7 @@ public class TripScreen extends AppCompatActivity {
         buses.add(new Bus(1, "Daniel", "Gershman", "0539533447", 25));
 
         adapter = new GridAdapter(TripScreen.this, buses);
-        gridView.setAdapter(adapter);
+        gridView.setAdapter(adapter);*/
 
 
 

@@ -26,6 +26,7 @@ public class CreateTrip extends Daniel_Template_Screen implements View.OnClickLi
     String key_trip="";
     ConstraintLayout create_trip_layout;
     DatabaseReference trip_ref;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

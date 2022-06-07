@@ -51,7 +51,7 @@ public class Daniel_Template_Screen extends AppCompatActivity {
     }
 
     public static void moveImage(Context context, View view){
-        ImageView imageView = (ImageView) view;
+        ImageView imageView = (pl.droidsonroids.gif.GifImageView) view;
         Animation animation = AnimationUtils.loadAnimation(context, R.anim.move);
         imageView.startAnimation(animation);
     }

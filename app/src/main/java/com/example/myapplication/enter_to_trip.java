@@ -29,7 +29,8 @@ public class enter_to_trip extends Daniel_Template_Screen
     private EditText etKey, etEmail, etPass;    //dialogs
     private String key = "";
     Button btn_LogOut, btn_LogIn, btnSubmit_Admin;  //dialogs
-    ImageButton btn_admin, btn_teacher, btn_contact, img_bus, btn_relax;
+    pl.droidsonroids.gif.GifImageView img_bus;
+    ImageButton btn_admin, btn_teacher, btn_contact, btn_relax;
     ConstraintLayout enter_screen_layout;
     Dialog d;
     int count = 0;
@@ -96,9 +97,8 @@ public class enter_to_trip extends Daniel_Template_Screen
                 //
                 break;
             case R.id.add_bus:
-                startActivity(
-                        new Intent(
-                                enter_to_trip.this,
+                //check if the given trip key by teacher is ok
+                startActivity(new Intent(enter_to_trip.this,
                         Add_Bus.class));
                 break;
             //below menu of teacher
