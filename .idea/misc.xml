@@ -16,7 +16,7 @@
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/activity_create_enter_trip.xml" value="0.2" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/activity_create_trip.xml" value="0.18981481481481483" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/activity_daniel_template_screen.xml" value="0.259375" />
-        <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/activity_enter_to_trip.xml" value="0.1" />
+        <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/activity_enter_to_trip.xml" value="0.264" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/activity_get_location.xml" value="0.259375" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/activity_image.xml" value="0.259375" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/activity_mail_pass.xml" value="0.259375" />
@@ -24,16 +24,17 @@
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/activity_profile.xml" value="0.259375" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/activity_start.xml" value="0.259375" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/activity_students_bus.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/activity_students_in_bus.xml" value="0.2598958333333333" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/activity_trip_screen.xml" value="0.14074074074074075" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/admin_dialog.xml" value="0.176" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/grid_element.xml" value="0.2598958333333333" />
-        <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/lv_item_checkbox.xml" value="0.18981481481481483" />
+        <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/lv_item_checkbox.xml" value="0.264" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/row_listview_trips.xml" value="0.2598958333333333" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/layout/teacher_dialog.xml" value="0.259375" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/menu/menu_admin.xml" value="0.22870370370370371" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/menu/menu_logout.xml" value="0.25833333333333336" />
         <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/menu/menu_settings.xml" value="0.16" />
-        <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/menu/menu_teacher.xml" value="0.1" />
+        <entry key="..\:/Users/Ronny/AndroidStudioProjects/project_v2/app/src/main/res/menu/menu_teacher.xml" value="0.264" />
       </map>
     </option>
   </component>
