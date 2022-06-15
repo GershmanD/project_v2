@@ -9,7 +9,7 @@
 
     <pl.droidsonroids.gif.GifImageView
 
-        android:id="@+id/pic"
+        android:id="@+id/picc"
         android:layout_width="226dp"
         android:layout_height="148dp"
         android:src="@drawable/bus2"
@@ -30,7 +30,7 @@
         android:layout_marginTop="124dp"
         android:gravity="center_horizontal"
         android:hint="trip code, press button to genrate"
-        android:textColorHint="#fff"
+        android:textColorHint="#FFE91E63"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,7 +42,44 @@
         android:layout_marginTop="204dp"
         android:gravity="center_horizontal"
         android:hint="select date, press button to select"
-        android:textColorHint="#fff"
+        android:textColorHint="#FFE91E63"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_busses_title"
+        android:layout_width="138dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:hint="enter trip title"
+        android:textColorHint="#E91E63"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_busses_place"
+        android:layout_width="135dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:hint="palce of trip"
+        android:textColorHint="#E91E63"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_busses"
+        android:layout_width="213dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="256dp"
+        android:gravity="center_horizontal"
+        android:hint="enter bus amount"
+        android:inputType="numberSigned"
+        android:textColorHint="#E91E63"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,7 +107,7 @@
         android:id="@+id/btn_create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
+        android:layout_marginStart="112dp"
         android:layout_marginBottom="340dp"
         android:text="create"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -80,7 +117,7 @@
         android:id="@+id/btn_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="232dp"
+        android:layout_marginStart="228dp"
         android:layout_marginBottom="340dp"
         android:text="cancel
 "

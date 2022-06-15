@@ -2,14 +2,14 @@ package com.example.myapplication;
 
 public class Person {
     private String name;
-    private int id;
+    private String key;
     private String phoneNumber;
 
 
 
-    public Person(String name, int id,String phoneNumber) {
+    public Person(String name, String key,String phoneNumber) {
         this.name = name;
-        this.id = id;
+        this.key = key;
         this.phoneNumber = phoneNumber;
     }
 
@@ -21,12 +21,12 @@ public class Person {
         this.name = name;
     }
 
-    public int getId() {
-        return id;
+    public String getKey() {
+        return key;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public String getPhoneNumber() {

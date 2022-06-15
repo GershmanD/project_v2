@@ -90,11 +90,12 @@ public class enter_to_trip extends Daniel_Template_Screen
     public boolean onContextItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case R.id.create_trip:
+                //is admin?
                 startActivity(new Intent(enter_to_trip.this,
                         CreateTrip.class));
                 break;
             case R.id.add_manager:
-                //
+                //if admin do something
                 break;
             case R.id.add_bus:
                 //check if the given trip key by teacher is ok
@@ -117,6 +118,31 @@ public class enter_to_trip extends Daniel_Template_Screen
     private void enterToTrip() {
         fb_enter_key.setVisibility(View.VISIBLE);
         et_key_of_trip.setVisibility(View.VISIBLE);
+        String input_key = et_key_of_trip.getText().toString();
+
+        DatabaseReference tripRef = FirebaseDatabase.getInstance().getReference(Trip_DatabseName + "/");
+        tripRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot data : snapshot.getChildren()) {
+                    int tr_but_amount = Integer.valueOf(data.child("title").getValue().toString());
+                    String tr_key = data.child("key").getValue().toString();
+                    String tr_place = data.child("place").getValue().toString();
+                    String tr_title = data.child("title").getValue().toString();
+                    String tr_date = data.child("date").getValue().toString();
+                    if (tr_key.equals(input_key))
+                        startActivity(new Intent(getApplicationContext(),
+                                MainActivity.class));
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     @Override
@@ -136,7 +162,7 @@ public class enter_to_trip extends Daniel_Template_Screen
                 howTo_dialog();
                 break;
             case R.id.btn_contact:
-                //call admin
+                //
                 break;
 
             case R.id.btn_teacher:

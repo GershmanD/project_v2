@@ -10,6 +10,7 @@ public class Bus {
 
     public Bus(String name_driver, String phonenumber_driver,
                String trip_code, int capacity_of_bus, int bus_number) {
+
         this.name_driver = name_driver;
         this.phonenumber_driver = phonenumber_driver;
         this.trip_code = trip_code;

@@ -4,7 +4,7 @@ public class Student extends Person{
     private String trip_key;
     private int bus_num;
 
-    public Student(String name, int id, String phoneNumber, String trip_key, int bus_num) {
+    public Student(String name, String id, String phoneNumber, String trip_key, int bus_num) {
         super(name, id, phoneNumber);
         this.trip_key = trip_key;
         this.bus_num = bus_num;

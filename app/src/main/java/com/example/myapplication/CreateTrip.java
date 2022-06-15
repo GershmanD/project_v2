@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,21 +20,21 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import pl.droidsonroids.gif.GifImageView;
 
 public class CreateTrip extends Daniel_Template_Screen implements View.OnClickListener {
-    GifImageView pic;
+    pl.droidsonroids.gif.GifImageView pic;
     Button btn_generate, btn_date, btn_create, btn_cancel;
     TextView tv_generate, tv_date;
     int month=0, year=0, day=0;
     String key_trip="";
     ConstraintLayout create_trip_layout;
     DatabaseReference trip_ref;
-
+    EditText et_busses, et_busses_title, et_busses_place;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_trip);
 
-        pic = findViewById(R.id.img_bus);
-        moveImage(getApplicationContext(), pic);
+        pic = findViewById(R.id.picc);
+        moveImage(CreateTrip.this, pic);
         initElements();
     }
 
@@ -41,7 +42,9 @@ public class CreateTrip extends Daniel_Template_Screen implements View.OnClickLi
         create_trip_layout = findViewById(R.id.create_trip_layout);
         tv_generate = findViewById(R.id.tv_generate);
         tv_date = findViewById(R.id.tv_date);
-
+        et_busses = findViewById(R.id.et_busses);
+        et_busses_place = findViewById(R.id.et_busses_place);
+        et_busses_title = findViewById(R.id.et_busses_title);
         btn_generate = findViewById(R.id.btn_generate);
         btn_date = findViewById(R.id.btn_date);
         btn_create = findViewById(R.id.btn_create);
@@ -82,7 +85,10 @@ public class CreateTrip extends Daniel_Template_Screen implements View.OnClickLi
 
     private void addTrip_ToDatbase() {
         String date = tv_date.getText().toString();
-        Trip t = new Trip(key_trip,date);
+        int amount = Integer.valueOf(et_busses.getText().toString());
+        Trip t = new Trip(amount, et_busses_title.getText().toString(),
+                key_trip,date, et_busses_place.getText().toString());
+
         trip_ref = FirebaseDatabase.getInstance().getReference(Trip_DatabseName).push();
         trip_ref.setValue(t);
         Toast.makeText(this, "trip created succefully!", Toast.LENGTH_SHORT).show();

@@ -14,21 +14,31 @@ public class MainActivity extends AppCompatActivity {
     Button btn_check_nohahut;
     Button btn_go_to_gridview;
     Button btn_change_key;
+    Intent intent;
+    String trip_key="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        intent = getIntent();
+        trip_key = intent.getStringExtra("name");
         btn_change_key = findViewById(R.id.btn_change_key);
         btn_change_key.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                startActivity(new Intent(MainActivity.this,
+                        All_Trips.class));
             }
         });
 
         btn_check_nohahut = findViewById(R.id.btn_to_check_attendance);
+        btn_check_nohahut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });
         btn_go_to_gridview = findViewById(R.id.btn_to_gridview);
 
         btn_go_to_gridview.setOnClickListener(new View.OnClickListener() {
